@@ -3,6 +3,6 @@
 <br>
 
 <div>
-    <span>Footer copyright sign</span>
+    <span>© <?php echo date("Y"); ?> Footer</span>
 </div>
 </html>
