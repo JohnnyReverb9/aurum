@@ -4,7 +4,6 @@ namespace router;
 
 class Router
 {
-
     private static array $list = [];
 
     public static function page($uri, $pageName): void

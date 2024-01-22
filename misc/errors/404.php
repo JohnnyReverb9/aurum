@@ -1,6 +1,6 @@
 <?php
 
-$title = "404";
+$title = "Dog's Docs | 404";
 include_once __DIR__ . "/../pages/header.php";
 
 ?>
