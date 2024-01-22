@@ -2,10 +2,11 @@
 
 $title = "Dog's Docs";
 include_once __DIR__ . "/pages/header.php";
+include_once __DIR__ . "/pages/navbar.php"
 
 ?>
 
-<div class="main-info" style="margin: 100px;">
+<div class="container" style="margin: 100px;">
     <h1>Welcome!</h1>
     <span>Have you ever been here?</span>
     <a href="/sign_in">Sign in</a>

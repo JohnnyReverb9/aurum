@@ -1,6 +1,3 @@
-<br>
-<br>
-<br>
 <script src="misc/style/js/bootstrap.js"></script>
 </body>
 <div>

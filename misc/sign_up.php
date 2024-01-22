@@ -2,9 +2,10 @@
 
 $title = "Dog's Docs | Sign up";
 include_once __DIR__ . "/pages/header.php";
+include_once __DIR__ . "/pages/navbar.php"
 
 ?>
-<div class="main-info" style="margin: 100px;">
+<div class="container" style="margin: 100px;">
     <div>
         <form action="../bin/auth_user.php" method="post">
             <label for="name">Name</label>

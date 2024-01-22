@@ -2,14 +2,13 @@
 
 $title = "Dog's Docs | 404";
 include_once __DIR__ . "/../pages/header.php";
+include_once __DIR__ . "/../pages/navbar.php"
 
 ?>
 
-<body>
-<div>
-    <h1>404 ERROR</h1>
+<div class="container">
+    <h1 class="mt-4">404 ERROR</h1>
 </div>
-</body>
 
 <?php
 
