@@ -17,13 +17,14 @@ class Router
 
     public static function enable(): void
     {
-        $query = $_GET["q"];
+        //if (isset($route["post"]) ? $route["post"] === true : false && $_SERVER["REQUEST_METHOD"] === "POST")
+        $query = $_GET['q'] ?? '';
 
         foreach (self::$list as $route)
         {
             if ($route["uri"] === "/" . $query)
             {
-                require_once "misc/" . $route["pageName"] . ".php";
+                require_once __DIR__ . "/misc/" . $route["pageName"] . ".php";
             }
         }
     }

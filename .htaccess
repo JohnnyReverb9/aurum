@@ -1,5 +1,5 @@
 #<IfModule dir_module>
-#    DirectoryIndex main.php index.html
+#DirectoryIndex index.php index.html
 #</IfModule>
 #AddDefaultCharset UTF-8
 #AddCharset UTF-8 .html
