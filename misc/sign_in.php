@@ -1,5 +1,6 @@
 <?php
 
+// Страница входа
 use selector\PagePartSelector;
 PagePartSelector::$titleName = "Dog's Docs | Sign in";
 PagePartSelector::selectPart("header");

@@ -1,5 +1,6 @@
 <?php
 
+// Страница регистрации
 use selector\PagePartSelector;
 PagePartSelector::$titleName = "Dog's Docs | Sign up";
 PagePartSelector::selectPart("header");

@@ -2,6 +2,7 @@
 
 namespace db;
 
+// Базовый класс для управления БД с начальными переменными для подключения
 abstract class ManagementDB
 {
     private string $username = "root";

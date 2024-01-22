@@ -1,5 +1,6 @@
 <?php
 
+// Главная страница ДО авторизации
 use selector\PagePartSelector;
 PagePartSelector::$titleName = "Dog's Docs";
 PagePartSelector::selectPart("header");

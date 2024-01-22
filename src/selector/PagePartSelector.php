@@ -2,6 +2,7 @@
 
 namespace selector;
 
+// Класс для вставки частей страницы, таких как хэдер, футер и подобное с передачей названия страницы
 class PagePartSelector
 {
     public static string $titleName;

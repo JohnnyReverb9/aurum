@@ -1,5 +1,6 @@
 <?php
 
+// Файл для настройки и включения роутинга
 use router\Router;
 
 Router::page("/main", "main");
