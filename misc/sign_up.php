@@ -10,28 +10,28 @@ PagePartSelector::selectPart("navbar");
         <h2>Sign up</h2>
         <form action="../bin/auth_user.php" method="post" class="mt-4">
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">User name</label>
-                <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter your name">
+                <label for="username" class="form-label">User name</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your name">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Login</label>
-                <input type="text" class="form-control" id="login" aria-describedby="emailHelp" placeholder="Enter your login">
+                <label for="login" class="form-label">Login</label>
+                <input type="text" class="form-control" id="login" placeholder="Enter your login">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter your e-mail">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your e-mail">
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">User avatar</label>
-                <input type="file" class="form-control" id="avatar" aria-describedby="emailHelp">
+                <label for="avatar" class="form-label">User avatar</label>
+                <input type="file" class="form-control" id="avatar">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Confirm password</label>
-                <input type="password" class="form-control" id="passwordConfirm" placeholder="Confirm your password">
+                <label for="passwordConfirm" class="form-label">Confirm password</label>
+                <input type="password" class="form-control" id="passwordConfirm">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

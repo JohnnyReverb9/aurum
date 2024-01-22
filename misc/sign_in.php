@@ -1,7 +1,8 @@
 <?php
 
 use selector\PagePartSelector;
-$title = "Dog's Docs | Sign in";
+//$title = "Dog's Docs | Sign in";
+PagePartSelector::$title = "Dog's Docs | Sign in";
 PagePartSelector::selectPart("header");
 PagePartSelector::selectPart("navbar");
 
@@ -13,7 +14,7 @@ PagePartSelector::selectPart("navbar");
         <form action="../bin/auth_user.php" method="post" class="mt-4">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your e-mail">
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your e-mail">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
