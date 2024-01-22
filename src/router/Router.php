@@ -24,7 +24,7 @@ class Router
         {
             if ($route["uri"] === "/" . $query)
             {
-                require_once __DIR__ . "/misc/" . $route["pageName"] . ".php";
+                include_once __DIR__ . "/../../misc/" . $route["pageName"] . ".php";
             }
         }
     }
