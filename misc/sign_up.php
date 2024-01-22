@@ -1,7 +1,7 @@
 <?php
 
 use selector\PagePartSelector;
-$title = "Dog's Docs | Sign up";
+PagePartSelector::$titleName = "Dog's Docs | Sign up";
 PagePartSelector::selectPart("header");
 PagePartSelector::selectPart("navbar");
 
