@@ -1,7 +1,8 @@
 {
   "autoload": {
     "psr-4": {
-      "\\db\\": "bin/db"
+      "\\db\\": "/bin/db",
+      "\\router\\": "/src/router"
     }
   }
 }

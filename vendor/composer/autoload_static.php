@@ -9,14 +9,19 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
     public static $prefixLengthsPsr4 = array (
         '\\' => 
         array (
+            '\\router\\' => 8,
             '\\db\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        '\\router\\' => 
+        array (
+            0 => '/src/router',
+        ),
         '\\db\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/bin/db',
+            0 => '/bin/db',
         ),
     );
 
