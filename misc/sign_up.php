@@ -7,7 +7,7 @@ include_once __DIR__ . "/pages/header.php";
 
 <body>
 <div>
-    <form action="main.php">
+    <form action="/main">
         <button>Main menu</button>
     </form>
 </div>

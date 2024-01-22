@@ -9,8 +9,8 @@ include_once __DIR__ . "/pages/header.php";
 <div>
     <h1>Welcome!</h1>
     <span>Have ever been here?</span>
-    <a href="sign_in.php">Sign in</a>
-    <a href="sign_up.php">Sign up</a>
+    <a href="/sign_in">Sign in</a>
+    <a href="/sign_up">Sign up</a>
 </div>
 </body>
 
