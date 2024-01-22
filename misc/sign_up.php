@@ -33,7 +33,7 @@ PagePartSelector::selectPart("navbar");
                 <label for="passwordConfirm" class="form-label">Confirm password</label>
                 <input type="password" class="form-control" id="passwordConfirm">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
         </form>
     </div>
 </div>

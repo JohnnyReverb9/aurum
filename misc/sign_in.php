@@ -20,7 +20,7 @@ PagePartSelector::selectPart("navbar");
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
         </form>
     </div>
 </div>
