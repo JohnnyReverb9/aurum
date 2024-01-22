@@ -1,8 +1,9 @@
 <?php
 
+use selector\PagePartSelector;
 $title = "Dog's Docs | Sign in";
-include_once __DIR__ . "/pages/header.php";
-include_once __DIR__ . "/pages/navbar.php"
+PagePartSelector::selectPart("header");
+PagePartSelector::selectPart("navbar");
 
 ?>
 
@@ -30,6 +31,6 @@ include_once __DIR__ . "/pages/navbar.php"
 
 <?php
 
-include_once __DIR__ . "/pages/footer.php";
+PagePartSelector::selectPart("footer");
 
 ?>

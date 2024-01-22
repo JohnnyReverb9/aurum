@@ -2,7 +2,8 @@
   "autoload": {
     "psr-4": {
       "db\\": "bin/db/",
-      "router\\": "src/router/"
+      "router\\": "src/router/",
+      "selector\\": "src/selector/"
     }
   }
 }

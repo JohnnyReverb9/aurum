@@ -1,8 +1,9 @@
 <?php
 
+use selector\PagePartSelector;
 $title = "Dog's Docs | Sign up";
-include_once __DIR__ . "/pages/header.php";
-include_once __DIR__ . "/pages/navbar.php"
+PagePartSelector::selectPart("header");
+PagePartSelector::selectPart("navbar");
 
 ?>
 <div class="container" style="margin: 100px;">
@@ -20,9 +21,6 @@ include_once __DIR__ . "/pages/navbar.php"
             <label>
                 <input type="email" name="email" placeholder="Enter your e-mail">
             </label>
-            <label>Profile picture</label>
-            <input type="file" name="avatar">
-            <label for="password">Password</label>
             <label>
                 <input type="password" name="password" placeholder="Enter your password">
             </label>
@@ -37,6 +35,6 @@ include_once __DIR__ . "/pages/navbar.php"
 
 <?php
 
-include_once __DIR__ . "/pages/footer.php";
+PagePartSelector::selectPart("footer");
 
 ?>
