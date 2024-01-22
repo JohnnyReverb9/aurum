@@ -1,8 +1,6 @@
 <?php
 
-//require_once __DIR__ . "/../vendor/autoload.php";
-require_once __DIR__ . "/db/ManagementDB.php";
-require_once __DIR__ . "/db/ManagementUsers.php";
+require_once __DIR__ . "/../vendor/autoload.php";
 
 $users = new \db\ManagementUsers();
 

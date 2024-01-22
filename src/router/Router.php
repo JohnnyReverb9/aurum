@@ -4,8 +4,27 @@ namespace router;
 
 class Router
 {
-    public static function test()
+
+    private static array $list = [];
+
+    public static function page($uri, $pageName): void
     {
-        echo 123;
+        self::$list[] = [
+            "uri" => $uri,
+            "pageName" => $pageName
+        ];
+    }
+
+    public static function enable(): void
+    {
+        $query = $_GET["q"];
+
+        foreach (self::$list as $route)
+        {
+            if ($route["uri"] === "/" . $query)
+            {
+                require_once "misc/" . $route["pageName"] . ".php";
+            }
+        }
     }
 }
