@@ -10,9 +10,9 @@ PagePartSelector::selectPart("navbar");
 <div class="container">
     <div class="jumbotron">
         <h1 class="display-4">Welcome!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p class="lead">This is your personal workspace with cool name.</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>Here you can organize your work to build your effectiveness.</p>
         <h3 class="display-6">You've never been here before?</h3>
         <a class="btn btn-primary btn-lg" role="button" href="/sign_up">Sign up</a>
         <h3 class="display-6">Sign in to touch unknown pleasures...</h3>
