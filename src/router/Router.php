@@ -25,7 +25,15 @@ class Router
             if ($route["uri"] === "/" . $query)
             {
                 include_once __DIR__ . "/../../misc/" . $route["pageName"] . ".php";
+                die();
             }
         }
+
+        self::notFoundPage();
+    }
+
+    private static function notFoundPage(): void
+    {
+        include_once __DIR__ . "/../../misc/errors/404.php";
     }
 }
