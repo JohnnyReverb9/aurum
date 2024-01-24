@@ -19,8 +19,8 @@ class Auth
 
         if ($password !== $passwordConfirm)
         {
-            // redirect
-            die();
+            $_SESSION["msg"] = "Password confirmation failed";
+            Router::redirect("/sign_up");
         }
 
         $fileName = time() . "_" . $avatar["name"];
@@ -42,7 +42,7 @@ class Auth
             }
             catch (\Exception $e)
             {
-                echo $e->getMessage();
+                $_SESSION["msg"] = $e->getMessage();
             }
         }
         else
@@ -53,31 +53,33 @@ class Auth
 
     public function signIn($postData): void
     {
+        session_start();
         $email = $postData["email"];
         $password = hash("sha256", $postData["password"]);
         $user = \R::findOne("users", "user_email = ?", [$email]);
 
         if (!$user)
         {
-            die("user not found");
+            $_SESSION["msg"] = "User not found";
+            Router::redirect("/sign_in");
         }
 
         if ($password === $user->user_password)
         {
-            session_start();
             $_SESSION["user"] = [
                 "id" => $user->id,
                 "user_name" => $user->user_name,
                 "user_login" => $user->user_login,
                 "user_email" => $user->user_email
             ];
-            // $_SESSION["group"] = $user->group; //TODO: сделать группу пользователей
+            $_SESSION["group"] = $user->group; //TODO: сделать группу пользователей
 
             Router::redirect("/home");
         }
         else
         {
-            die("invalid login or password");
+            $_SESSION["msg"] = "Invalid login or password";
+            Router::redirect("/sign_in");
         }
     }
 
