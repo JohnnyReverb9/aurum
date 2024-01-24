@@ -23,8 +23,6 @@ class Router
 
         foreach (self::$list as $route)
         {
-//            print_r($route);
-//            print_r($_FILES);
             if ($route["uri"] === "/" . $query)
             {
                 if (isset($route["post"]) && $_SERVER["REQUEST_METHOD"] === "POST") // проверка на POST

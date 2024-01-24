@@ -13,7 +13,7 @@ if (isset($_SESSION["user"]))
 }
 ?>
 
-<div class="container" style="margin: 100px;">
+<div class="container">
     <div>
         <h2>Sign in</h2>
         <form action="/auth/sign_in" method="post" class="mt-4">

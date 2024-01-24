@@ -13,7 +13,7 @@ if (isset($_SESSION["user"]))
 }
 
 ?>
-<div class="container" style="margin: 100px;">
+<div class="container">
         <h2>Sign up</h2>
         <form action="/auth/sign_up" method="post" enctype="multipart/form-data" class="mt-4">
             <div class="mb-3">
