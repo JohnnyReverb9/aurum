@@ -35,6 +35,23 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
+                <div>
+                    <?php
+                    if (isset($_SESSION["user"]))
+                    {
+                    ?>
+                    <a href="/logout">Logout</a>
+                    <?php
+                    }
+                    else
+                    {
+                    ?>
+                    <a href="/sign_in">Sign in</a>
+                    <a href="/sign_up">Sign up</a>
+                    <?php
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </div>

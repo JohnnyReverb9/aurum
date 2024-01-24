@@ -40,10 +40,12 @@ class Router
                     elseif (isset($route["formData"]) && !isset($route["files"]))
                     {
                         $action->$function($_POST);
+                        die();
                     }
                     else
                     {
                         $action->$function();
+                        die();
                     }
                 }
                 else // вывод страниц
@@ -68,7 +70,14 @@ class Router
     }
 
     // метод для обработки действий с страницей
-    public static function action(string $uri, string $method, string $class, string $function, bool $formData = false, bool $files = false): void
+    public static function action(
+        string $uri,
+        string $method,
+        string $class,
+        string $function,
+        bool $formData = false,
+        bool $files = false
+    ): void
     {
         switch ($method)
         {

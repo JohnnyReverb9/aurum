@@ -26,7 +26,7 @@ class Auth
         $fileName = time() . "_" . $avatar["name"];
         $avatarsPath = "uploads/avatars/" . $fileName;
 
-        if (move_uploaded_file($avatar["tmp_name"], $avatarsPath))
+        if (move_uploaded_file($avatar["tmp_name"], $avatarsPath)) // TODO: без аватарки не работает
         {
             $users = \R::dispense('users');
             $users->user_name = $username;
@@ -48,6 +48,36 @@ class Auth
         else
         {
             Router::errorRedirect("500");
+        }
+    }
+
+    public function signIn($postData): void
+    {
+        $email = $postData["email"];
+        $password = hash("sha256", $postData["password"]);
+        $user = \R::findOne("users", "user_email = ?", [$email]);
+
+        if (!$user)
+        {
+            die("user not found");
+        }
+
+        if ($password === $user->user_password)
+        {
+            session_start();
+            $_SESSION["user"] = [
+                "id" => $user->id,
+                "user_name" => $user->user_name,
+                "user_login" => $user->user_login,
+                "user_email" => $user->user_email
+            ];
+            // $_SESSION["group"] = $user->group; //TODO: сделать группу пользователей
+
+            Router::redirect("/home");
+        }
+        else
+        {
+            die("invalid login or password");
         }
     }
 }

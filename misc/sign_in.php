@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Страница входа
 use selector\PagePartSelector;
@@ -6,6 +7,10 @@ PagePartSelector::$titleName = "Dog's Docs | Sign in";
 PagePartSelector::selectPart("header");
 PagePartSelector::selectPart("navbar");
 
+if (isset($_SESSION["user"]))
+{
+    \router\Router::redirect("/home");
+}
 ?>
 
 <div class="container" style="margin: 100px;">
@@ -18,7 +23,7 @@ PagePartSelector::selectPart("navbar");
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name"password" placeholder="Enter your password">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
             </div>
             <button type="submit" class="btn btn-primary btn-lg">Submit</button>
         </form>

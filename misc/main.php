@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Главная страница ДО авторизации
 use selector\PagePartSelector;
@@ -6,6 +7,10 @@ PagePartSelector::$titleName = "Dog's Docs";
 PagePartSelector::selectPart("header");
 PagePartSelector::selectPart("navbar");
 
+if (isset($_SESSION["user"]))
+{
+    \router\Router::redirect("/home");
+}
 ?>
 
 <div class="container">
