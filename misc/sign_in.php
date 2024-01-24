@@ -3,7 +3,7 @@ session_start();
 
 // Страница входа
 use selector\PagePartSelector;
-PagePartSelector::$titleName = "Dog's Docs | Sign in";
+PagePartSelector::$titleName = "Aurum | Sign in";
 PagePartSelector::selectPart("header");
 PagePartSelector::selectPart("navbar");
 

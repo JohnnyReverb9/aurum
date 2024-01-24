@@ -1,5 +1,5 @@
 <?php
 
 return [
-    "main" => "http://localhost/"
+    "main" => "http://aurum/"
 ];

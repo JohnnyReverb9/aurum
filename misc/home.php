@@ -4,7 +4,7 @@
 session_start();
 use selector\PagePartSelector;
 
-PagePartSelector::$titleName = "Dog's Docs";
+PagePartSelector::$titleName = "Aurum";
 PagePartSelector::selectPart("header");
 PagePartSelector::selectPart("navbar");
 

@@ -1,6 +1,6 @@
 <nav class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/main">Dog's Docs</a>
+        <a class="navbar-brand" href="/main">Aurum</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,7 +35,7 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
-                <div>
+                <br>
                     <?php
                     if (isset($_SESSION["user"]))
                     {
@@ -46,7 +46,7 @@
                     else
                     {
                     ?>
-                    <a href="/sign_in">Sign in</a>
+                    <a href="/sign_in">Sign in</a><br>
                     <a href="/sign_up">Sign up</a>
                     <?php
                     }
