@@ -11,7 +11,7 @@ PagePartSelector::selectPart("navbar");
 <div class="container" style="margin: 100px;">
     <div>
         <h2>Sign in</h2>
-        <form action="../bin/auth_user.php" method="post" class="mt-4">
+        <form action="/auth/sign_in" method="post" class="mt-4">
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter your e-mail">

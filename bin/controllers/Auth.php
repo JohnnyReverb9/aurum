@@ -7,7 +7,7 @@ use router\Router;
 // Контроллер для авторизации и входа
 class Auth
 {
-    public function signUp($postData, $files)
+    public function signUp(array $postData, array $files): void
     {
         $username = $postData["username"];
         $login = $postData["login"];
@@ -33,12 +33,12 @@ class Auth
             $users->user_login = $login;
             $users->user_email = $email;
             $users->user_password = $password;
-            $users->user_avatar = $fileName;
+            $users->user_avatar = "/" . $avatarsPath;
 
             try
             {
                 \R::store($users);
-                Router::redirect("sign_in");
+                Router::redirect("/sign_in");
             }
             catch (\Exception $e)
             {

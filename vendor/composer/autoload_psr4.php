@@ -11,4 +11,5 @@ return array(
     'init\\' => array($baseDir . '/bin/init'),
     'db\\' => array($baseDir . '/bin/db'),
     'controllers\\' => array($baseDir . '/bin/controllers'),
+    '\\' => array($baseDir . '/'),
 );

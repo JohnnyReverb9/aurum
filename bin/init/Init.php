@@ -19,6 +19,7 @@ class Init
 
         foreach ($conf["libs"] as $lib)
         {
+            echo __DIR__;
             require_once "libs/" . $lib . ".php";
         }
     }

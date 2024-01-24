@@ -9,7 +9,7 @@ class Router
 {
     private static array $list = []; // массив с uri
 
-    public static function page($uri, $pageName): void // метод для получения uri и имён страниц
+    public static function page(string $uri, string $pageName): void // метод для получения uri и имён страниц
     {
         self::$list[] = [
             "uri" => $uri,
@@ -57,18 +57,18 @@ class Router
         self::errorRedirect("404"); // если не нашлась страница
     }
 
-    public static function errorRedirect($errorCode): void // метод для вывода 404, если маршрут не был найден
+    public static function errorRedirect(string $errorCode): void // метод для вывода 404, если маршрут не был найден
     {
         include_once __DIR__ . "/../../misc/errors/" . $errorCode . ".php";
     }
 
-    public static function redirect($pageName)
+    public static function redirect(string $uri): void
     {
-        include_once __DIR__ . "/../../misc/" . $pageName . ".php";
+        header("Location: $uri");
     }
 
     // метод для обработки действий с страницей
-    public static function action($uri, $method, $class, $function, $formData = false, $files = false): void
+    public static function action(string $uri, string $method, string $class, string $function, bool $formData = false, bool $files = false): void
     {
         switch ($method)
         {
