@@ -1,5 +1,1 @@
 Папка для аплоада аватарок
-      "db\\": "bin/db/",
-      "selector\\": "src/selector/",
-      "init\\": "bin/init/",
-      "controllers\\": "bin/controllers"
