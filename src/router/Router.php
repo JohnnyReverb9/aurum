@@ -23,6 +23,8 @@ class Router
 
         foreach (self::$list as $route)
         {
+//            print_r($route);
+//            print_r($_FILES);
             if ($route["uri"] === "/" . $query)
             {
                 if (isset($route["post"]) && $_SERVER["REQUEST_METHOD"] === "POST") // проверка на действие с формами
@@ -33,6 +35,7 @@ class Router
                     if (isset($route["formData"]) && isset($route["files"]))
                     {
                         $action->$function($_POST, $_FILES);
+                        die();
                     }
                     elseif (isset($route["formData"]) && !isset($route["files"]))
                     {
@@ -59,6 +62,11 @@ class Router
         include_once __DIR__ . "/../../misc/errors/" . $errorCode . ".php";
     }
 
+    public static function redirect($pageName)
+    {
+        include_once __DIR__ . "/../../misc/" . $pageName . ".php";
+    }
+
     // метод для обработки действий с страницей
     public static function action($uri, $method, $class, $function, $formData = false, $files = false): void
     {
@@ -71,8 +79,8 @@ class Router
                     "class" => $class,
                     "function" => $function,
                     "post" => true,
-                    "formData" => $formData, // Передача значений $_POST из файла
-                    "files" => $files // Передача файлов $_FILES
+                    "formData" => $formData, // Передача значений $_POST из файла (да / нет)
+                    "files" => $files // Передача файлов $_FILES (да / нет)
                 ];
             }
 
