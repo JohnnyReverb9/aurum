@@ -15,6 +15,10 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         array (
             'router\\' => 7,
         ),
+        'i' => 
+        array (
+            'init\\' => 5,
+        ),
         'd' => 
         array (
             'db\\' => 3,
@@ -29,6 +33,10 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'router\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/router',
+        ),
+        'init\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/bin/init',
         ),
         'db\\' => 
         array (

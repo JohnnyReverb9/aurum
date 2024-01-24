@@ -8,5 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'selector\\' => array($baseDir . '/src/selector'),
     'router\\' => array($baseDir . '/src/router'),
+    'init\\' => array($baseDir . '/bin/init'),
     'db\\' => array($baseDir . '/bin/db'),
 );

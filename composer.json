@@ -3,7 +3,8 @@
     "psr-4": {
       "db\\": "bin/db/",
       "router\\": "src/router/",
-      "selector\\": "src/selector/"
+      "selector\\": "src/selector/",
+      "init\\": "bin/init/"
     }
   }
 }

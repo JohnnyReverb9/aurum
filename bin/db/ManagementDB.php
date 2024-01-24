@@ -3,29 +3,20 @@
 namespace db;
 
 // Базовый класс для управления БД с начальными переменными для подключения
-abstract class ManagementDB
+class ManagementDB
 {
-    private string $username = "root";
-    private string $password = "";
-    private string $hostname = "localhost";
-    private string $database = "dogs_docs";
-    private int $port = 3306;
-
-    protected function dbConnect(): \mysqli|bool
+    public static function dbConnect(): void
     {
-        $connect = mysqli_connect($this->hostname, $this->username, $this->password, $this->database, $this->port);
+        $conf = require_once "bin/config/conf_db.php";
 
-        if (!$connect)
+        if ($conf["enable"])
         {
-            die("ERROR: Something went wrong");
+            \R::setup("mysql:host=" . $conf["hostname"] . ";dbname=" . $conf["database"], $conf["username"], $conf["password"]);
+
+            if (!\R::testConnection())
+            {
+                die("ERROR: DB connect");
+            }
         }
-
-        return $connect;
-    }
-
-    public function query($sql)
-    {
-        $connect = $this->dbConnect();
-        return $connect->query($sql);
     }
 }
