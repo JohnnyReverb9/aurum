@@ -40,7 +40,7 @@
                     if (isset($_SESSION["user"]))
                     {
                     ?>
-                    <a href="/logout">Logout</a>
+                    <a href="/auth/logout">Logout</a>
                     <?php
                     }
                     else

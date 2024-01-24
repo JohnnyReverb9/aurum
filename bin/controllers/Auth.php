@@ -80,4 +80,10 @@ class Auth
             die("invalid login or password");
         }
     }
+
+    public function logout()
+    {
+        unset($_SESSION["user"]);
+        \router\Router::redirect("/main");
+    }
 }

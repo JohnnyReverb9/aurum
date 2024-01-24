@@ -27,7 +27,7 @@ class Router
 //            print_r($_FILES);
             if ($route["uri"] === "/" . $query)
             {
-                if (isset($route["post"]) && $_SERVER["REQUEST_METHOD"] === "POST") // проверка на действие с формами
+                if (isset($route["post"]) && $_SERVER["REQUEST_METHOD"] === "POST") // проверка на POST
                 {
                     $action = new $route["class"];
                     $function = $route["function"];
@@ -47,6 +47,13 @@ class Router
                         $action->$function();
                         die();
                     }
+                }
+                elseif (isset($route["get"]) && $_SERVER["REQUEST_METHOD"] === "GET") // Проверка на GET
+                {
+                    $action = new $route["class"];
+                    $function = $route["function"];
+
+                    $action->$function();
                 }
                 else // вывод страниц
                 {
@@ -99,7 +106,7 @@ class Router
                     "uri" => $uri,
                     "class" => $class,
                     "function" => $function,
-                    "post" => false
+                    "get" => true
                 ];
             }
         }
