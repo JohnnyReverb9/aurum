@@ -12,4 +12,11 @@ class PagePartSelector
         $title = self::$titleName;
         include_once "misc/pages/" . $partName . ".php";
     }
+
+    public static function stylePathHeaderInsertion($path): string
+    {
+        $paths = require_once "bin/config/conf_paths.php";
+        $mainPath = $paths["main"] ?? "/";
+        return $mainPath . $path;
+    }
 }

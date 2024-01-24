@@ -30,11 +30,11 @@ class Router
                     $action = new $route["class"];
                     $function = $route["function"];
 
-                    if ($route["formData"] && $route["files"])
+                    if (isset($route["formData"]) && isset($route["files"]))
                     {
                         $action->$function($_POST, $_FILES);
                     }
-                    elseif ($route["formData"] && !$route["files"])
+                    elseif (isset($route["formData"]) && !isset($route["files"]))
                     {
                         $action->$function($_POST);
                     }
@@ -51,12 +51,12 @@ class Router
             }
         }
 
-        self::notFoundPage(); // если не нашлась страница
+        self::errorRedirect("404"); // если не нашлась страница
     }
 
-    private static function notFoundPage(): void // метод для вывода 404, если маршрут не был найден
+    public static function errorRedirect($errorCode): void // метод для вывода 404, если маршрут не был найден
     {
-        include_once __DIR__ . "/../../misc/errors/404.php";
+        include_once __DIR__ . "/../../misc/errors/" . $errorCode . ".php";
     }
 
     // метод для обработки действий с страницей
