@@ -1,10 +1,16 @@
 <?php
+session_start();
 
 // Страница регистрации
 use selector\PagePartSelector;
 PagePartSelector::$titleName = "Dog's Docs | Sign up";
 PagePartSelector::selectPart("header");
 PagePartSelector::selectPart("navbar");
+
+if (isset($_SESSION["user"]))
+{
+    \router\Router::redirect("/home");
+}
 
 ?>
 <div class="container" style="margin: 100px;">
